@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# ligne crontab correspondante
+# 0 * * * * /home/utilisateur/bin/pige-antenne.sh
+
+
 # on lance la pige d'antenne
 arecord -f cd -d 3600 -t wav | lame -V 9  - /home/utilisateur/pige-antenne/$(date +%F-%H-%M).mp3
 
